@@ -24,7 +24,6 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "codeium" },
 				{ name = "luasnip" }, -- For luasnip users.
 			}, {
 				{ name = "buffer" },
@@ -49,7 +48,7 @@ return {
 		vim.keymap.set("n", "<Leader>ce", vim.lsp.codelens.run, { silent = true }) -- Execute code lens
 
 		-- Diagnostics
-		vim.keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, { silent = true }) -- Go to next diagnostic
+		vim.keymap.set("n", "<Leader>dn", vim.diagnostic.goto_next, { silent = true }) -- Go to next diagnostic
 		vim.keymap.set("n", "<Leader>dp", vim.diagnostic.goto_prev, { silent = true }) -- Go to previous diagnostic
 		vim.keymap.set("n", "<Leader>df", vim.diagnostic.open_float, { silent = true }) -- Show diagnostic in floating window
 		vim.keymap.set("n", "<Leader>dq", vim.diagnostic.setloclist, { silent = true }) -- Add diagnostics to location list
